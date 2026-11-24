@@ -1,3 +1,3 @@
-module vremenska_postaja
+module github.com/Tscukr/vremenska_postaja
 
 go 1.27.2

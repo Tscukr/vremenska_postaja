@@ -1,5 +1,5 @@
 // simulacija vremenske postaje iz 1. naloge VPAS
-package vremenskaPostaja
+package vreme
 
 import (
 	"fmt"
@@ -13,14 +13,8 @@ type Postaja struct {
 	meritve []float64
 }
 
-var postaje map[string]Postaja
-
-func main() {
-	postaje = make(map[string]Postaja)
-}
-
-func DodajPostajo(kljuc string, ime string, kraj string, meritve []float64) {
-	postaje[kljuc] = Postaja{ime, kraj, meritve}
+func DodajPostajo(postaje map[string]Postaja, oznaka string, ime string, kraj string, meritve []float64) {
+	postaje[oznaka] = Postaja{ime: ime, kraj: kraj}
 }
 
 // postaji z dano oznako doda novo meritev
